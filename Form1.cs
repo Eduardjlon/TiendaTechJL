@@ -1,5 +1,5 @@
 
-using TiendaExaFinalS2.Interfaces;
+
 using TiendaExaFinalS2.InterfacesC;
 using TiendaExaFinalS2.InterfacesE;
 using TiendaExaFinalS2.InterfacesSobreNosotros;
@@ -12,7 +12,7 @@ namespace TiendaExaFinalS2
         {
             InitializeComponent();
             costumizeDesign();
-           
+
         }
         private void costumizeDesign()
         {
@@ -48,7 +48,7 @@ namespace TiendaExaFinalS2
 
         private void IniciarSesion_Click(object sender, EventArgs e)
         {
-            var iniciarSesionForm = new IniciarSesionE(); 
+            var iniciarSesionForm = new IniciarSesionE();
             AbrirFormularioEnPanel(iniciarSesionForm);   // Mostrarlo en el panel
         }
 
@@ -65,9 +65,11 @@ namespace TiendaExaFinalS2
 
         private void IniciarSesionC_Click(object sender, EventArgs e)
         {
-            var iniciarSesionForm = new IniciarSesionC();   
+            var iniciarSesionForm = new IniciarSesionC();
             AbrirFormularioEnPanel(iniciarSesionForm);   // Mostrarlo en el panel
         }
+
+
 
         private void CrearUsuarioC_Click(object sender, EventArgs e)
         {
@@ -81,7 +83,7 @@ namespace TiendaExaFinalS2
             AbrirFormularioEnPanel(SobreNosotrosForm); //Mostrarlo en el panel
             showSubMenus(panelRedesSociales);
         }
-        private void AbrirFormularioEnPanel(Form formulario)
+        public void AbrirFormularioEnPanel(Form formulario)
         {
             // Limpiar cualquier control existente en el panel
             panelContenedor.Controls.Clear();
@@ -94,7 +96,7 @@ namespace TiendaExaFinalS2
             // Agregar el formulario al panel y mostrarlo
             panelContenedor.Controls.Add(formulario);
             formulario.Show();
+       
         }
-
     }
 }

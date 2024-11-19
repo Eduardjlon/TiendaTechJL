@@ -1,6 +1,6 @@
 ﻿namespace TiendaExaFinalS2.InterfacesE
 {
-    partial class CrearUsuarioE
+    partial class ContraOlvidadaE
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // CrearUsuarioE
+            // ContraOlvidadaE
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(668, 522);
             MinimumSize = new Size(684, 561);
-            Name = "CrearUsuarioE";
-            Text = "CrearUsuarioE";
+            Name = "ContraOlvidadaE";
+            Text = "ContraOlvidada";
             ResumeLayout(false);
         }
 
