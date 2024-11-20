@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,10 @@ namespace TiendaExaFinalS2.InterfacesE
 {
     public partial class CrearUsuarioE : Form
     {
-        public CrearUsuarioE()
+        public CrearUsuarioE() 
         {
             InitializeComponent();
         }
     }
 }
+
