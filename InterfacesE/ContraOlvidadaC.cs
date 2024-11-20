@@ -16,5 +16,20 @@ namespace TiendaExaFinalS2.InterfacesE
         {
             InitializeComponent();
         }
+
+        private void ContraOlvidadaE_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelInicioSesion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxContraI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
