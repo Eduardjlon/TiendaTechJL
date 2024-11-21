@@ -36,6 +36,7 @@
             textBoxContraI = new TextBox();
             OlvideContraseña = new Button();
             button1 = new Button();
+            panelImagenLogo = new Panel();
             SuspendLayout();
             // 
             // LabelInicioSesion
@@ -44,7 +45,7 @@
             LabelInicioSesion.FlatStyle = FlatStyle.Flat;
             LabelInicioSesion.Font = new Font("Snap ITC", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelInicioSesion.ForeColor = Color.White;
-            LabelInicioSesion.Location = new Point(243, 97);
+            LabelInicioSesion.Location = new Point(240, 135);
             LabelInicioSesion.Name = "LabelInicioSesion";
             LabelInicioSesion.Size = new Size(206, 31);
             LabelInicioSesion.TabIndex = 0;
@@ -56,7 +57,7 @@
             // 
             UsuarioIngreso.BackColor = Color.Black;
             UsuarioIngreso.ForeColor = Color.White;
-            UsuarioIngreso.Location = new Point(243, 205);
+            UsuarioIngreso.Location = new Point(240, 243);
             UsuarioIngreso.Name = "UsuarioIngreso";
             UsuarioIngreso.Size = new Size(206, 23);
             UsuarioIngreso.TabIndex = 1;
@@ -69,7 +70,7 @@
             labelIniciaSesionParaContinuar.FlatStyle = FlatStyle.Flat;
             labelIniciaSesionParaContinuar.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelIniciaSesionParaContinuar.ForeColor = Color.White;
-            labelIniciaSesionParaContinuar.Location = new Point(227, 128);
+            labelIniciaSesionParaContinuar.Location = new Point(224, 166);
             labelIniciaSesionParaContinuar.Margin = new Padding(0);
             labelIniciaSesionParaContinuar.Name = "labelIniciaSesionParaContinuar";
             labelIniciaSesionParaContinuar.Size = new Size(234, 16);
@@ -84,7 +85,7 @@
             labelUsuario.FlatStyle = FlatStyle.Flat;
             labelUsuario.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelUsuario.ForeColor = Color.White;
-            labelUsuario.Location = new Point(243, 186);
+            labelUsuario.Location = new Point(240, 224);
             labelUsuario.Margin = new Padding(0);
             labelUsuario.Name = "labelUsuario";
             labelUsuario.Size = new Size(69, 16);
@@ -99,7 +100,7 @@
             ContraseñaIngreso.FlatStyle = FlatStyle.Flat;
             ContraseñaIngreso.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ContraseñaIngreso.ForeColor = Color.White;
-            ContraseñaIngreso.Location = new Point(243, 252);
+            ContraseñaIngreso.Location = new Point(240, 290);
             ContraseñaIngreso.Margin = new Padding(0);
             ContraseñaIngreso.Name = "ContraseñaIngreso";
             ContraseñaIngreso.Size = new Size(99, 16);
@@ -111,7 +112,7 @@
             // 
             textBoxContraI.BackColor = Color.Black;
             textBoxContraI.ForeColor = Color.White;
-            textBoxContraI.Location = new Point(243, 271);
+            textBoxContraI.Location = new Point(240, 309);
             textBoxContraI.Name = "textBoxContraI";
             textBoxContraI.Size = new Size(206, 23);
             textBoxContraI.TabIndex = 4;
@@ -141,12 +142,21 @@
             button1.FlatAppearance.MouseOverBackColor = Color.Red;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(243, 300);
+            button1.Location = new Point(240, 338);
             button1.Name = "button1";
             button1.Size = new Size(206, 23);
             button1.TabIndex = 8;
             button1.Text = "Iniciar Sesion Cliente";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // panelImagenLogo
+            // 
+            panelImagenLogo.BackgroundImage = Properties.Resources.LogoEmpresa;
+            panelImagenLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelImagenLogo.Location = new Point(242, 12);
+            panelImagenLogo.Name = "panelImagenLogo";
+            panelImagenLogo.Size = new Size(206, 100);
+            panelImagenLogo.TabIndex = 37;
             // 
             // IniciarSesionC
             // 
@@ -154,6 +164,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
+            Controls.Add(panelImagenLogo);
             Controls.Add(button1);
             Controls.Add(OlvideContraseña);
             Controls.Add(ContraseñaIngreso);
@@ -179,5 +190,6 @@
         private TextBox textBoxContraI;
         private Button OlvideContraseña;
         private Button button1;
+        private Panel panelImagenLogo;
     }
 }

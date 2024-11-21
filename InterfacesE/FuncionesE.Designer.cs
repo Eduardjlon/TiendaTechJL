@@ -34,10 +34,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
             ClientSize = new Size(668, 522);
             MinimumSize = new Size(684, 561);
             Name = "FuncionesE";
             Text = "FuncionesE";
+            Load += FuncionesE_Load;
             ResumeLayout(false);
         }
 

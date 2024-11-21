@@ -37,6 +37,7 @@
             labelUsuario = new Label();
             labelCargo = new Label();
             labelNoDPI = new Label();
+            panelImagenLogo = new Panel();
             SuspendLayout();
             // 
             // VerificarDatosContra
@@ -153,12 +154,22 @@
             labelNoDPI.Text = "No. DPI";
             labelNoDPI.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // panelImagenLogo
+            // 
+            panelImagenLogo.BackgroundImage = Properties.Resources.LogoEmpresa;
+            panelImagenLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelImagenLogo.Location = new Point(226, 21);
+            panelImagenLogo.Name = "panelImagenLogo";
+            panelImagenLogo.Size = new Size(213, 100);
+            panelImagenLogo.TabIndex = 29;
+            // 
             // ContraOlvidadaC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
+            Controls.Add(panelImagenLogo);
             Controls.Add(labelNoDPI);
             Controls.Add(labelCargo);
             Controls.Add(labelUsuario);
@@ -187,5 +198,6 @@
         private Label labelUsuario;
         private Label labelCargo;
         private Label labelNoDPI;
+        private Panel panelImagenLogo;
     }
 }

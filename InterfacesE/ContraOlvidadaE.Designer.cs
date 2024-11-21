@@ -37,6 +37,7 @@
             labelCargo = new Label();
             textBoxFechaDeNacimiento = new TextBox();
             VerificarDatosContra = new Button();
+            panelImagenLogo = new Panel();
             SuspendLayout();
             // 
             // LabelNoDPI
@@ -155,12 +156,22 @@
             VerificarDatosContra.Text = "Verificar";
             VerificarDatosContra.UseVisualStyleBackColor = true;
             // 
+            // panelImagenLogo
+            // 
+            panelImagenLogo.BackgroundImage = Properties.Resources.LogoEmpresa;
+            panelImagenLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelImagenLogo.Location = new Point(226, 21);
+            panelImagenLogo.Name = "panelImagenLogo";
+            panelImagenLogo.Size = new Size(213, 100);
+            panelImagenLogo.TabIndex = 30;
+            // 
             // ContraOlvidadaE
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
+            Controls.Add(panelImagenLogo);
             Controls.Add(VerificarDatosContra);
             Controls.Add(labelCargo);
             Controls.Add(textBoxFechaDeNacimiento);
@@ -189,5 +200,6 @@
         private Label labelCargo;
         private TextBox textBoxFechaDeNacimiento;
         private Button VerificarDatosContra;
+        private Panel panelImagenLogo;
     }
 }

@@ -23,6 +23,7 @@ namespace TiendaExaFinalS2.InterfacesE
             labelCargo = new Label();
             labelUsuario = new Label();
             labelContraseña = new Label();
+            panelImagenLogo = new Panel();
             SuspendLayout();
             // 
             // txtNombre
@@ -194,10 +195,20 @@ namespace TiendaExaFinalS2.InterfacesE
             labelContraseña.Text = "Contraseña:";
             labelContraseña.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // panelImagenLogo
+            // 
+            panelImagenLogo.BackgroundImage = Properties.Resources.LogoEmpresa;
+            panelImagenLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelImagenLogo.Location = new Point(226, 4);
+            panelImagenLogo.Name = "panelImagenLogo";
+            panelImagenLogo.Size = new Size(213, 100);
+            panelImagenLogo.TabIndex = 35;
+            // 
             // CrearUsuarioE
             // 
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
+            Controls.Add(panelImagenLogo);
             Controls.Add(labelContraseña);
             Controls.Add(labelUsuario);
             Controls.Add(labelCargo);
@@ -295,5 +306,6 @@ namespace TiendaExaFinalS2.InterfacesE
         private Label labelCargo;
         private Label labelUsuario;
         private Label labelContraseña;
+        private Panel panelImagenLogo;
     }
 }

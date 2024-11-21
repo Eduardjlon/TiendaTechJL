@@ -244,7 +244,7 @@
             Estudiante.Padding = new Padding(10, 0, 0, 0);
             Estudiante.Size = new Size(250, 45);
             Estudiante.TabIndex = 1;
-            Estudiante.Text = "Estudiante";
+            Estudiante.Text = "Empleado";
             Estudiante.TextAlign = ContentAlignment.MiddleLeft;
             Estudiante.UseVisualStyleBackColor = false;
             Estudiante.Click += Estudiante_Click;

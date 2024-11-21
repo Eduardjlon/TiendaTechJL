@@ -42,6 +42,7 @@
             txtDPI = new TextBox();
             txtApellido = new TextBox();
             txtNombre = new TextBox();
+            panelImagenLogo = new Panel();
             SuspendLayout();
             // 
             // labelContraseña
@@ -211,12 +212,22 @@
             txtNombre.Size = new Size(253, 23);
             txtNombre.TabIndex = 20;
             // 
+            // panelImagenLogo
+            // 
+            panelImagenLogo.BackgroundImage = Properties.Resources.LogoEmpresa;
+            panelImagenLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelImagenLogo.Location = new Point(226, 4);
+            panelImagenLogo.Name = "panelImagenLogo";
+            panelImagenLogo.Size = new Size(213, 100);
+            panelImagenLogo.TabIndex = 34;
+            // 
             // CrearUsuarioC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
+            Controls.Add(panelImagenLogo);
             Controls.Add(labelContraseña);
             Controls.Add(labelUsuario);
             Controls.Add(labelCargo);
@@ -254,5 +265,6 @@
         private TextBox txtDPI;
         private TextBox txtApellido;
         private TextBox txtNombre;
+        private Panel panelImagenLogo;
     }
 }

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TiendaExaFinalS2.InterfacesE
+namespace TiendaExaFinalS2.InterfacesC
 {
-    public partial class FuncionesE : Form
+    public partial class VerificarContraseñaC : Form
     {
-        public FuncionesE()
+        public VerificarContraseñaC()
         {
             InitializeComponent();
-        }
-
-        private void FuncionesE_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
