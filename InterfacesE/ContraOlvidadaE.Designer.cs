@@ -34,7 +34,7 @@
             labelSigueLosSiguientesPasos = new Label();
             UsuarioIngreso = new TextBox();
             LabelRecuperandoContraseña = new Label();
-            labelFechaDeNacimiento = new Label();
+            labelCargo = new Label();
             textBoxFechaDeNacimiento = new TextBox();
             VerificarDatosContra = new Button();
             SuspendLayout();
@@ -108,7 +108,7 @@
             LabelRecuperandoContraseña.FlatStyle = FlatStyle.Flat;
             LabelRecuperandoContraseña.Font = new Font("Snap ITC", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelRecuperandoContraseña.ForeColor = Color.White;
-            LabelRecuperandoContraseña.Location = new Point(144, 107);
+            LabelRecuperandoContraseña.Location = new Point(142, 124);
             LabelRecuperandoContraseña.Name = "LabelRecuperandoContraseña";
             LabelRecuperandoContraseña.Size = new Size(399, 31);
             LabelRecuperandoContraseña.TabIndex = 6;
@@ -116,19 +116,19 @@
             LabelRecuperandoContraseña.TextAlign = ContentAlignment.MiddleCenter;
             LabelRecuperandoContraseña.Click += LabelInicioSesion_Click;
             // 
-            // labelFechaDeNacimiento
+            // labelCargo
             // 
-            labelFechaDeNacimiento.AutoSize = true;
-            labelFechaDeNacimiento.FlatStyle = FlatStyle.Flat;
-            labelFechaDeNacimiento.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelFechaDeNacimiento.ForeColor = Color.White;
-            labelFechaDeNacimiento.Location = new Point(226, 266);
-            labelFechaDeNacimiento.Margin = new Padding(0);
-            labelFechaDeNacimiento.Name = "labelFechaDeNacimiento";
-            labelFechaDeNacimiento.Size = new Size(167, 16);
-            labelFechaDeNacimiento.TabIndex = 13;
-            labelFechaDeNacimiento.Text = "Fecha De Nacimiento";
-            labelFechaDeNacimiento.TextAlign = ContentAlignment.MiddleCenter;
+            labelCargo.AutoSize = true;
+            labelCargo.FlatStyle = FlatStyle.Flat;
+            labelCargo.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelCargo.ForeColor = Color.White;
+            labelCargo.Location = new Point(226, 266);
+            labelCargo.Margin = new Padding(0);
+            labelCargo.Name = "labelCargo";
+            labelCargo.Size = new Size(53, 16);
+            labelCargo.TabIndex = 13;
+            labelCargo.Text = "Cargo";
+            labelCargo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBoxFechaDeNacimiento
             // 
@@ -162,7 +162,7 @@
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
             Controls.Add(VerificarDatosContra);
-            Controls.Add(labelFechaDeNacimiento);
+            Controls.Add(labelCargo);
             Controls.Add(textBoxFechaDeNacimiento);
             Controls.Add(LabelNoDPI);
             Controls.Add(textBoxNoDPI);
@@ -186,7 +186,7 @@
         private Label labelSigueLosSiguientesPasos;
         private TextBox UsuarioIngreso;
         private Label LabelRecuperandoContraseña;
-        private Label labelFechaDeNacimiento;
+        private Label labelCargo;
         private TextBox textBoxFechaDeNacimiento;
         private Button VerificarDatosContra;
     }

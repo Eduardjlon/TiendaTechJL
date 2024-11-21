@@ -13,9 +13,14 @@ namespace TiendaExaFinalS2.InterfacesE
 {
     public partial class CrearUsuarioE : Form
     {
-        public CrearUsuarioE() 
+        public CrearUsuarioE()
         {
             InitializeComponent();
+        }
+
+        private void LabelInicioSesion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

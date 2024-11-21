@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             VerificarDatosContra = new Button();
-            labelFechaDeNacimiento = new Label();
-            textBoxFechaDeNacimiento = new TextBox();
-            LabelNoDPI = new Label();
+            textBoxCargo = new TextBox();
             textBoxNoDPI = new TextBox();
-            labelUsuario = new Label();
-            labelSigueLosSiguientesPasos = new Label();
             UsuarioIngreso = new TextBox();
             LabelRecuperandoContraseña = new Label();
+            labelSigueLosSiguientesPasos = new Label();
+            labelUsuario = new Label();
+            labelCargo = new Label();
+            labelNoDPI = new Label();
             SuspendLayout();
             // 
             // VerificarDatosContra
@@ -47,94 +47,38 @@
             VerificarDatosContra.FlatAppearance.MouseOverBackColor = Color.Red;
             VerificarDatosContra.FlatStyle = FlatStyle.Flat;
             VerificarDatosContra.ForeColor = Color.White;
-            VerificarDatosContra.Location = new Point(217, 394);
+            VerificarDatosContra.Location = new Point(226, 395);
             VerificarDatosContra.Name = "VerificarDatosContra";
             VerificarDatosContra.Size = new Size(213, 23);
             VerificarDatosContra.TabIndex = 23;
             VerificarDatosContra.Text = "Verificar";
             VerificarDatosContra.UseVisualStyleBackColor = true;
             // 
-            // labelFechaDeNacimiento
+            // textBoxCargo
             // 
-            labelFechaDeNacimiento.AutoSize = true;
-            labelFechaDeNacimiento.FlatStyle = FlatStyle.Flat;
-            labelFechaDeNacimiento.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelFechaDeNacimiento.ForeColor = Color.White;
-            labelFechaDeNacimiento.Location = new Point(217, 265);
-            labelFechaDeNacimiento.Margin = new Padding(0);
-            labelFechaDeNacimiento.Name = "labelFechaDeNacimiento";
-            labelFechaDeNacimiento.Size = new Size(156, 16);
-            labelFechaDeNacimiento.TabIndex = 22;
-            labelFechaDeNacimiento.Text = "Fecha De Nacimiento";
-            labelFechaDeNacimiento.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // textBoxFechaDeNacimiento
-            // 
-            textBoxFechaDeNacimiento.BackColor = Color.Black;
-            textBoxFechaDeNacimiento.ForeColor = Color.White;
-            textBoxFechaDeNacimiento.Location = new Point(217, 284);
-            textBoxFechaDeNacimiento.Name = "textBoxFechaDeNacimiento";
-            textBoxFechaDeNacimiento.Size = new Size(213, 23);
-            textBoxFechaDeNacimiento.TabIndex = 21;
-            textBoxFechaDeNacimiento.TextAlign = HorizontalAlignment.Center;
-            // 
-            // LabelNoDPI
-            // 
-            LabelNoDPI.AutoSize = true;
-            LabelNoDPI.FlatStyle = FlatStyle.Flat;
-            LabelNoDPI.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelNoDPI.ForeColor = Color.White;
-            LabelNoDPI.Location = new Point(217, 326);
-            LabelNoDPI.Margin = new Padding(0);
-            LabelNoDPI.Name = "LabelNoDPI";
-            LabelNoDPI.Size = new Size(60, 16);
-            LabelNoDPI.TabIndex = 20;
-            LabelNoDPI.Text = "No. DPI";
-            LabelNoDPI.TextAlign = ContentAlignment.MiddleCenter;
+            textBoxCargo.BackColor = Color.Black;
+            textBoxCargo.ForeColor = Color.White;
+            textBoxCargo.Location = new Point(226, 285);
+            textBoxCargo.Name = "textBoxCargo";
+            textBoxCargo.Size = new Size(213, 23);
+            textBoxCargo.TabIndex = 21;
+            textBoxCargo.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxNoDPI
             // 
             textBoxNoDPI.BackColor = Color.Black;
             textBoxNoDPI.ForeColor = Color.White;
-            textBoxNoDPI.Location = new Point(217, 345);
+            textBoxNoDPI.Location = new Point(226, 346);
             textBoxNoDPI.Name = "textBoxNoDPI";
             textBoxNoDPI.Size = new Size(213, 23);
             textBoxNoDPI.TabIndex = 19;
             textBoxNoDPI.TextAlign = HorizontalAlignment.Center;
             // 
-            // labelUsuario
-            // 
-            labelUsuario.AutoSize = true;
-            labelUsuario.FlatStyle = FlatStyle.Flat;
-            labelUsuario.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUsuario.ForeColor = Color.White;
-            labelUsuario.Location = new Point(217, 205);
-            labelUsuario.Margin = new Padding(0);
-            labelUsuario.Name = "labelUsuario";
-            labelUsuario.Size = new Size(61, 16);
-            labelUsuario.TabIndex = 18;
-            labelUsuario.Text = "Usuario";
-            labelUsuario.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelSigueLosSiguientesPasos
-            // 
-            labelSigueLosSiguientesPasos.AutoSize = true;
-            labelSigueLosSiguientesPasos.FlatStyle = FlatStyle.Flat;
-            labelSigueLosSiguientesPasos.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelSigueLosSiguientesPasos.ForeColor = Color.White;
-            labelSigueLosSiguientesPasos.Location = new Point(217, 154);
-            labelSigueLosSiguientesPasos.Margin = new Padding(0);
-            labelSigueLosSiguientesPasos.Name = "labelSigueLosSiguientesPasos";
-            labelSigueLosSiguientesPasos.Size = new Size(201, 16);
-            labelSigueLosSiguientesPasos.TabIndex = 17;
-            labelSigueLosSiguientesPasos.Text = "Sigue Los Siguientes Pasos";
-            labelSigueLosSiguientesPasos.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // UsuarioIngreso
             // 
             UsuarioIngreso.BackColor = Color.Black;
             UsuarioIngreso.ForeColor = Color.White;
-            UsuarioIngreso.Location = new Point(217, 224);
+            UsuarioIngreso.Location = new Point(226, 225);
             UsuarioIngreso.Name = "UsuarioIngreso";
             UsuarioIngreso.Size = new Size(213, 23);
             UsuarioIngreso.TabIndex = 16;
@@ -144,14 +88,70 @@
             // 
             LabelRecuperandoContraseña.AutoSize = true;
             LabelRecuperandoContraseña.FlatStyle = FlatStyle.Flat;
-            LabelRecuperandoContraseña.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelRecuperandoContraseña.Font = new Font("Snap ITC", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelRecuperandoContraseña.ForeColor = Color.White;
-            LabelRecuperandoContraseña.Location = new Point(135, 106);
+            LabelRecuperandoContraseña.Location = new Point(142, 124);
             LabelRecuperandoContraseña.Name = "LabelRecuperandoContraseña";
-            LabelRecuperandoContraseña.Size = new Size(333, 29);
-            LabelRecuperandoContraseña.TabIndex = 15;
-            LabelRecuperandoContraseña.Text = "Recuperarando Contraseña";
+            LabelRecuperandoContraseña.Size = new Size(368, 31);
+            LabelRecuperandoContraseña.TabIndex = 24;
+            LabelRecuperandoContraseña.Text = "Recuperando Contraseña";
             LabelRecuperandoContraseña.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelSigueLosSiguientesPasos
+            // 
+            labelSigueLosSiguientesPasos.AutoSize = true;
+            labelSigueLosSiguientesPasos.FlatStyle = FlatStyle.Flat;
+            labelSigueLosSiguientesPasos.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSigueLosSiguientesPasos.ForeColor = Color.White;
+            labelSigueLosSiguientesPasos.Location = new Point(226, 155);
+            labelSigueLosSiguientesPasos.Margin = new Padding(0);
+            labelSigueLosSiguientesPasos.Name = "labelSigueLosSiguientesPasos";
+            labelSigueLosSiguientesPasos.Size = new Size(213, 16);
+            labelSigueLosSiguientesPasos.TabIndex = 25;
+            labelSigueLosSiguientesPasos.Text = "Sigue Los Siguientes Pasos";
+            labelSigueLosSiguientesPasos.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelUsuario
+            // 
+            labelUsuario.AutoSize = true;
+            labelUsuario.FlatStyle = FlatStyle.Flat;
+            labelUsuario.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelUsuario.ForeColor = Color.White;
+            labelUsuario.Location = new Point(226, 206);
+            labelUsuario.Margin = new Padding(0);
+            labelUsuario.Name = "labelUsuario";
+            labelUsuario.Size = new Size(69, 16);
+            labelUsuario.TabIndex = 26;
+            labelUsuario.Text = "Usuario";
+            labelUsuario.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelCargo
+            // 
+            labelCargo.AutoSize = true;
+            labelCargo.FlatStyle = FlatStyle.Flat;
+            labelCargo.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelCargo.ForeColor = Color.White;
+            labelCargo.Location = new Point(226, 266);
+            labelCargo.Margin = new Padding(0);
+            labelCargo.Name = "labelCargo";
+            labelCargo.Size = new Size(53, 16);
+            labelCargo.TabIndex = 27;
+            labelCargo.Text = "Cargo";
+            labelCargo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelNoDPI
+            // 
+            labelNoDPI.AutoSize = true;
+            labelNoDPI.FlatStyle = FlatStyle.Flat;
+            labelNoDPI.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoDPI.ForeColor = Color.White;
+            labelNoDPI.Location = new Point(226, 327);
+            labelNoDPI.Margin = new Padding(0);
+            labelNoDPI.Name = "labelNoDPI";
+            labelNoDPI.Size = new Size(59, 16);
+            labelNoDPI.TabIndex = 28;
+            labelNoDPI.Text = "No. DPI";
+            labelNoDPI.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ContraOlvidadaC
             // 
@@ -159,15 +159,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
-            Controls.Add(VerificarDatosContra);
-            Controls.Add(labelFechaDeNacimiento);
-            Controls.Add(textBoxFechaDeNacimiento);
-            Controls.Add(LabelNoDPI);
-            Controls.Add(textBoxNoDPI);
+            Controls.Add(labelNoDPI);
+            Controls.Add(labelCargo);
             Controls.Add(labelUsuario);
             Controls.Add(labelSigueLosSiguientesPasos);
-            Controls.Add(UsuarioIngreso);
             Controls.Add(LabelRecuperandoContraseña);
+            Controls.Add(VerificarDatosContra);
+            Controls.Add(textBoxCargo);
+            Controls.Add(textBoxNoDPI);
+            Controls.Add(UsuarioIngreso);
             MinimumSize = new Size(684, 561);
             Name = "ContraOlvidadaC";
             Text = "Olvide Mi Contraseña";
@@ -179,13 +179,13 @@
         #endregion
 
         private Button VerificarDatosContra;
-        private Label labelFechaDeNacimiento;
-        private TextBox textBoxFechaDeNacimiento;
-        private Label LabelNoDPI;
+        private TextBox textBoxCargo;
         private TextBox textBoxNoDPI;
-        private Label labelUsuario;
-        private Label labelSigueLosSiguientesPasos;
         private TextBox UsuarioIngreso;
         private Label LabelRecuperandoContraseña;
+        private Label labelSigueLosSiguientesPasos;
+        private Label labelUsuario;
+        private Label labelCargo;
+        private Label labelNoDPI;
     }
 }

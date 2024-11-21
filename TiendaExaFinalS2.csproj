@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="InterfacesE\ContraOlvidadaC.cs">
+    <Compile Update="InterfacesE\ContraOlvidadaE.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

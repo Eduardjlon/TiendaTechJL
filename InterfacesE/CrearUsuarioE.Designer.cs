@@ -9,120 +9,214 @@ namespace TiendaExaFinalS2.InterfacesE
 
         private void InitializeComponent()
         {
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtDPI = new System.Windows.Forms.TextBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-
-            this.txtNombre.Location = new System.Drawing.Point(150, 30);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 20);
-            this.txtNombre.TabIndex = 0;
-
-            this.txtApellido.Location = new System.Drawing.Point(150, 70);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(200, 20);
-            this.txtApellido.TabIndex = 1;
-
-            this.txtDPI.Location = new System.Drawing.Point(150, 110);
-            this.txtDPI.Name = "txtDPI";
-            this.txtDPI.Size = new System.Drawing.Size(200, 20);
-            this.txtDPI.TabIndex = 2;
-
-            this.txtCargo.Location = new System.Drawing.Point(150, 150);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(200, 20);
-            this.txtCargo.TabIndex = 3;
-
-            this.txtUsuario.Location = new System.Drawing.Point(150, 190);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 20);
-            this.txtUsuario.TabIndex = 4;
-
-            this.txtContrasena.Location = new System.Drawing.Point(150, 230);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(200, 20);
-            this.txtContrasena.TabIndex = 5;
-
-            this.btnAgregarEmpleado.Location = new System.Drawing.Point(150, 270);
-            this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
-            this.btnAgregarEmpleado.Size = new System.Drawing.Size(200, 40);
-            this.btnAgregarEmpleado.TabIndex = 6;
-            this.btnAgregarEmpleado.Text = "Agregar Empleado";
-            this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
-            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
-
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nombre:";
-
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Apellidos:";
-
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "DPI:";
-
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Cargo:";
-
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(70, 190);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Usuario:";
-
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(70, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Contraseña:";
-
-            this.ClientSize = new System.Drawing.Size(400, 330);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAgregarEmpleado);
-            this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtCargo);
-            this.Controls.Add(this.txtDPI);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
-            this.Name = "CrearUsuarioE";
-            this.Text = "Agregar Empleado";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            txtNombre = new TextBox();
+            txtApellido = new TextBox();
+            txtDPI = new TextBox();
+            txtCargo = new TextBox();
+            txtUsuario = new TextBox();
+            txtContrasena = new TextBox();
+            btnAgregarEmpleado = new Button();
+            LabelCreandoUsuario = new Label();
+            labelNombre = new Label();
+            labelApellido = new Label();
+            labelDPI = new Label();
+            labelCargo = new Label();
+            labelUsuario = new Label();
+            labelContraseña = new Label();
+            SuspendLayout();
+            // 
+            // txtNombre
+            // 
+            txtNombre.BackColor = Color.Black;
+            txtNombre.ForeColor = Color.White;
+            txtNombre.Location = new Point(205, 180);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(253, 23);
+            txtNombre.TabIndex = 0;
+            // 
+            // txtApellido
+            // 
+            txtApellido.BackColor = Color.Black;
+            txtApellido.ForeColor = Color.White;
+            txtApellido.Location = new Point(205, 225);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(253, 23);
+            txtApellido.TabIndex = 1;
+            // 
+            // txtDPI
+            // 
+            txtDPI.BackColor = Color.Black;
+            txtDPI.ForeColor = Color.White;
+            txtDPI.Location = new Point(205, 270);
+            txtDPI.Name = "txtDPI";
+            txtDPI.Size = new Size(253, 23);
+            txtDPI.TabIndex = 2;
+            // 
+            // txtCargo
+            // 
+            txtCargo.BackColor = Color.Black;
+            txtCargo.ForeColor = Color.White;
+            txtCargo.Location = new Point(205, 315);
+            txtCargo.Name = "txtCargo";
+            txtCargo.Size = new Size(253, 23);
+            txtCargo.TabIndex = 3;
+            // 
+            // txtUsuario
+            // 
+            txtUsuario.BackColor = Color.Black;
+            txtUsuario.ForeColor = Color.White;
+            txtUsuario.Location = new Point(205, 360);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(253, 23);
+            txtUsuario.TabIndex = 4;
+            // 
+            // txtContrasena
+            // 
+            txtContrasena.BackColor = Color.Black;
+            txtContrasena.ForeColor = Color.White;
+            txtContrasena.Location = new Point(205, 405);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.PasswordChar = '*';
+            txtContrasena.Size = new Size(253, 23);
+            txtContrasena.TabIndex = 5;
+            // 
+            // btnAgregarEmpleado
+            // 
+            btnAgregarEmpleado.BackColor = Color.Black;
+            btnAgregarEmpleado.FlatAppearance.BorderSize = 0;
+            btnAgregarEmpleado.FlatAppearance.MouseDownBackColor = Color.Blue;
+            btnAgregarEmpleado.FlatAppearance.MouseOverBackColor = Color.Red;
+            btnAgregarEmpleado.FlatStyle = FlatStyle.Flat;
+            btnAgregarEmpleado.ForeColor = Color.White;
+            btnAgregarEmpleado.Location = new Point(205, 447);
+            btnAgregarEmpleado.Name = "btnAgregarEmpleado";
+            btnAgregarEmpleado.Size = new Size(253, 22);
+            btnAgregarEmpleado.TabIndex = 6;
+            btnAgregarEmpleado.Text = "Crear Empleado";
+            btnAgregarEmpleado.UseVisualStyleBackColor = false;
+            btnAgregarEmpleado.Click += btnAgregarEmpleado_Click;
+            // 
+            // LabelCreandoUsuario
+            // 
+            LabelCreandoUsuario.AutoSize = true;
+            LabelCreandoUsuario.FlatStyle = FlatStyle.Flat;
+            LabelCreandoUsuario.Font = new Font("Snap ITC", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelCreandoUsuario.ForeColor = Color.White;
+            LabelCreandoUsuario.Location = new Point(205, 107);
+            LabelCreandoUsuario.Name = "LabelCreandoUsuario";
+            LabelCreandoUsuario.Size = new Size(253, 31);
+            LabelCreandoUsuario.TabIndex = 13;
+            LabelCreandoUsuario.Text = "Creando Usuario";
+            LabelCreandoUsuario.TextAlign = ContentAlignment.MiddleCenter;
+            LabelCreandoUsuario.Click += LabelInicioSesion_Click;
+            // 
+            // labelNombre
+            // 
+            labelNombre.AutoSize = true;
+            labelNombre.FlatStyle = FlatStyle.Flat;
+            labelNombre.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNombre.ForeColor = Color.White;
+            labelNombre.Location = new Point(205, 161);
+            labelNombre.Margin = new Padding(0);
+            labelNombre.Name = "labelNombre";
+            labelNombre.Size = new Size(71, 16);
+            labelNombre.TabIndex = 14;
+            labelNombre.Text = "Nombre:";
+            labelNombre.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelApellido
+            // 
+            labelApellido.AutoSize = true;
+            labelApellido.FlatStyle = FlatStyle.Flat;
+            labelApellido.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelApellido.ForeColor = Color.White;
+            labelApellido.Location = new Point(205, 206);
+            labelApellido.Margin = new Padding(0);
+            labelApellido.Name = "labelApellido";
+            labelApellido.Size = new Size(79, 16);
+            labelApellido.TabIndex = 15;
+            labelApellido.Text = "Apellido:";
+            labelApellido.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelDPI
+            // 
+            labelDPI.AutoSize = true;
+            labelDPI.FlatStyle = FlatStyle.Flat;
+            labelDPI.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelDPI.ForeColor = Color.White;
+            labelDPI.Location = new Point(205, 251);
+            labelDPI.Margin = new Padding(0);
+            labelDPI.Name = "labelDPI";
+            labelDPI.Size = new Size(36, 16);
+            labelDPI.TabIndex = 16;
+            labelDPI.Text = "DPI:";
+            labelDPI.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelCargo
+            // 
+            labelCargo.AutoSize = true;
+            labelCargo.FlatStyle = FlatStyle.Flat;
+            labelCargo.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelCargo.ForeColor = Color.White;
+            labelCargo.Location = new Point(205, 296);
+            labelCargo.Margin = new Padding(0);
+            labelCargo.Name = "labelCargo";
+            labelCargo.Size = new Size(58, 16);
+            labelCargo.TabIndex = 17;
+            labelCargo.Text = "CARGO:";
+            labelCargo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelUsuario
+            // 
+            labelUsuario.AutoSize = true;
+            labelUsuario.FlatStyle = FlatStyle.Flat;
+            labelUsuario.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelUsuario.ForeColor = Color.White;
+            labelUsuario.Location = new Point(205, 341);
+            labelUsuario.Margin = new Padding(0);
+            labelUsuario.Name = "labelUsuario";
+            labelUsuario.Size = new Size(74, 16);
+            labelUsuario.TabIndex = 18;
+            labelUsuario.Text = "Usuario:";
+            labelUsuario.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelContraseña
+            // 
+            labelContraseña.AutoSize = true;
+            labelContraseña.FlatStyle = FlatStyle.Flat;
+            labelContraseña.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelContraseña.ForeColor = Color.White;
+            labelContraseña.Location = new Point(205, 386);
+            labelContraseña.Margin = new Padding(0);
+            labelContraseña.Name = "labelContraseña";
+            labelContraseña.Size = new Size(104, 16);
+            labelContraseña.TabIndex = 19;
+            labelContraseña.Text = "Contraseña:";
+            labelContraseña.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // CrearUsuarioE
+            // 
+            BackColor = Color.Black;
+            ClientSize = new Size(668, 522);
+            Controls.Add(labelContraseña);
+            Controls.Add(labelUsuario);
+            Controls.Add(labelCargo);
+            Controls.Add(labelDPI);
+            Controls.Add(labelApellido);
+            Controls.Add(labelNombre);
+            Controls.Add(LabelCreandoUsuario);
+            Controls.Add(btnAgregarEmpleado);
+            Controls.Add(txtContrasena);
+            Controls.Add(txtUsuario);
+            Controls.Add(txtCargo);
+            Controls.Add(txtDPI);
+            Controls.Add(txtApellido);
+            Controls.Add(txtNombre);
+            MinimumSize = new Size(684, 561);
+            Name = "CrearUsuarioE";
+            Text = "Agregar Empleado";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.TextBox txtNombre;
@@ -132,12 +226,6 @@ namespace TiendaExaFinalS2.InterfacesE
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnAgregarEmpleado;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
 
         private void btnAgregarEmpleado_Click(object sender, EventArgs e)
         {
@@ -198,5 +286,14 @@ namespace TiendaExaFinalS2.InterfacesE
                 MessageBox.Show("Error al agregar el empleado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private Label LabelCreandoUsuario;
+        private Label labelNombre;
+        private Label labelApellido;
+        private Label labelDPI;
+        private Label label1;
+        private Label labelCargo;
+        private Label labelUsuario;
+        private Label labelContraseña;
     }
 }
