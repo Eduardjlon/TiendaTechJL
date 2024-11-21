@@ -16,5 +16,10 @@ namespace TiendaExaFinalS2.InterfacesC
         {
             InitializeComponent();
         }
+
+        private void ContraOlvidadaC_Load(object sender, EventArgs e)
+        {
+            //ola prueba
+        }
     }
 }

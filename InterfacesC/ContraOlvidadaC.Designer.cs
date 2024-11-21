@@ -58,12 +58,12 @@
             // 
             labelFechaDeNacimiento.AutoSize = true;
             labelFechaDeNacimiento.FlatStyle = FlatStyle.Flat;
-            labelFechaDeNacimiento.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelFechaDeNacimiento.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelFechaDeNacimiento.ForeColor = Color.White;
             labelFechaDeNacimiento.Location = new Point(217, 265);
             labelFechaDeNacimiento.Margin = new Padding(0);
             labelFechaDeNacimiento.Name = "labelFechaDeNacimiento";
-            labelFechaDeNacimiento.Size = new Size(167, 16);
+            labelFechaDeNacimiento.Size = new Size(156, 16);
             labelFechaDeNacimiento.TabIndex = 22;
             labelFechaDeNacimiento.Text = "Fecha De Nacimiento";
             labelFechaDeNacimiento.TextAlign = ContentAlignment.MiddleCenter;
@@ -82,12 +82,12 @@
             // 
             LabelNoDPI.AutoSize = true;
             LabelNoDPI.FlatStyle = FlatStyle.Flat;
-            LabelNoDPI.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelNoDPI.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelNoDPI.ForeColor = Color.White;
             LabelNoDPI.Location = new Point(217, 326);
             LabelNoDPI.Margin = new Padding(0);
             LabelNoDPI.Name = "LabelNoDPI";
-            LabelNoDPI.Size = new Size(59, 16);
+            LabelNoDPI.Size = new Size(60, 16);
             LabelNoDPI.TabIndex = 20;
             LabelNoDPI.Text = "No. DPI";
             LabelNoDPI.TextAlign = ContentAlignment.MiddleCenter;
@@ -106,12 +106,12 @@
             // 
             labelUsuario.AutoSize = true;
             labelUsuario.FlatStyle = FlatStyle.Flat;
-            labelUsuario.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelUsuario.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelUsuario.ForeColor = Color.White;
             labelUsuario.Location = new Point(217, 205);
             labelUsuario.Margin = new Padding(0);
             labelUsuario.Name = "labelUsuario";
-            labelUsuario.Size = new Size(69, 16);
+            labelUsuario.Size = new Size(61, 16);
             labelUsuario.TabIndex = 18;
             labelUsuario.Text = "Usuario";
             labelUsuario.TextAlign = ContentAlignment.MiddleCenter;
@@ -120,12 +120,12 @@
             // 
             labelSigueLosSiguientesPasos.AutoSize = true;
             labelSigueLosSiguientesPasos.FlatStyle = FlatStyle.Flat;
-            labelSigueLosSiguientesPasos.Font = new Font("Stencil", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSigueLosSiguientesPasos.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelSigueLosSiguientesPasos.ForeColor = Color.White;
             labelSigueLosSiguientesPasos.Location = new Point(217, 154);
             labelSigueLosSiguientesPasos.Margin = new Padding(0);
             labelSigueLosSiguientesPasos.Name = "labelSigueLosSiguientesPasos";
-            labelSigueLosSiguientesPasos.Size = new Size(213, 16);
+            labelSigueLosSiguientesPasos.Size = new Size(201, 16);
             labelSigueLosSiguientesPasos.TabIndex = 17;
             labelSigueLosSiguientesPasos.Text = "Sigue Los Siguientes Pasos";
             labelSigueLosSiguientesPasos.TextAlign = ContentAlignment.MiddleCenter;
@@ -144,11 +144,11 @@
             // 
             LabelRecuperandoContraseña.AutoSize = true;
             LabelRecuperandoContraseña.FlatStyle = FlatStyle.Flat;
-            LabelRecuperandoContraseña.Font = new Font("Snap ITC", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelRecuperandoContraseña.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelRecuperandoContraseña.ForeColor = Color.White;
             LabelRecuperandoContraseña.Location = new Point(135, 106);
             LabelRecuperandoContraseña.Name = "LabelRecuperandoContraseña";
-            LabelRecuperandoContraseña.Size = new Size(399, 31);
+            LabelRecuperandoContraseña.Size = new Size(333, 29);
             LabelRecuperandoContraseña.TabIndex = 15;
             LabelRecuperandoContraseña.Text = "Recuperarando Contraseña";
             LabelRecuperandoContraseña.TextAlign = ContentAlignment.MiddleCenter;
@@ -171,6 +171,7 @@
             MinimumSize = new Size(684, 561);
             Name = "ContraOlvidadaC";
             Text = "Olvide Mi Contraseña";
+            Load += ContraOlvidadaC_Load;
             ResumeLayout(false);
             PerformLayout();
         }
