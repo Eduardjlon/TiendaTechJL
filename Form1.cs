@@ -12,7 +12,12 @@ namespace TiendaExaFinalS2
         {
             InitializeComponent();
             costumizeDesign();
+            CargarFormularioInicial();
 
+        }
+        private void CargarFormularioInicial()
+        {
+            AbrirFormularioEnPanel(new SobreNosotros());
         }
         private void costumizeDesign()
         {

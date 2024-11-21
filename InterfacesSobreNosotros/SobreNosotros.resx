@@ -117,4 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelSobreNosotrosInfo.Text" xml:space="preserve">
+    <value>¡Bienvenidos a TECHJL! Somos una apasionada empresa de diseño e impresión 3D conformada por un grupo de cinco creativos emprendedores. Nuestro objetivo es transformar ideas en objetos únicos y funcionales, utilizando la tecnología más avanzada en impresión 3D.
+
+Nuestra inspiración nació de la idea de crear algo propio: un mini proyecto con el potencial de crecer y ser reconocido por la calidad y creatividad de nuestros productos. Nos especializamos en:
+
+Figuras personalizadas: Desde personajes hasta modelos exclusivos.
+Estuches: Funcionales y adaptados a tus necesidades.
+Diseños decorativos: Dale vida a tus espacios con piezas únicas.
+Accesorios personalizados: Llaveros, soportes, organizadores, ¡y más!
+En TECHJL, creemos que cada idea merece ser materializada. Nos encanta trabajar contigo para dar forma a tus proyectos y hacerlos realidad. Nuestro compromiso es brindarte productos de alta calidad que combinan funcionalidad, diseño y durabilidad.
+
+Nuestra visión:
+Convertirnos en líderes en soluciones creativas de impresión 3D, transformando ideas en productos que marquen la diferencia.
+
+Nuestra misión:
+Ofrecer innovación y personalización, diseñando objetos que se adapten a cada necesidad y reflejen la imaginación de nuestros clientes.
+
+Conócenos más:
+No solo somos un equipo, somos una familia de creadores, soñadores y diseñadores. ¡Gracias por confiar en nosotros</value>
+  </data>
 </root>

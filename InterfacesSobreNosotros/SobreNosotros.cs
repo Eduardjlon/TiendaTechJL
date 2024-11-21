@@ -16,5 +16,10 @@ namespace TiendaExaFinalS2.InterfacesSobreNosotros
         {
             InitializeComponent();
         }
+
+        private void labelSobreNosotrosInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
