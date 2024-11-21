@@ -252,6 +252,8 @@
             // panelLogo
             // 
             panelLogo.BackColor = Color.Transparent;
+            panelLogo.BackgroundImage = Properties.Resources.LogoEmpresa;
+            panelLogo.BackgroundImageLayout = ImageLayout.Stretch;
             panelLogo.Dock = DockStyle.Top;
             panelLogo.ImeMode = ImeMode.NoControl;
             panelLogo.Location = new Point(0, 0);
