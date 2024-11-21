@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelSideMenu = new Panel();
+            panelRedesSociales = new Panel();
+            RedesSociales = new Button();
             Sobre = new Button();
             panelMenu2 = new Panel();
             CrearUsuarioC = new Button();
@@ -40,12 +43,10 @@
             Estudiante = new Button();
             panelLogo = new Panel();
             panelContenedor = new Panel();
-            panelRedesSociales = new Panel();
-            RedesSociales = new Button();
             panelSideMenu.SuspendLayout();
+            panelRedesSociales.SuspendLayout();
             panelMenu2.SuspendLayout();
             panelSubMenu.SuspendLayout();
-            panelRedesSociales.SuspendLayout();
             SuspendLayout();
             // 
             // panelSideMenu
@@ -64,6 +65,35 @@
             panelSideMenu.Name = "panelSideMenu";
             panelSideMenu.Size = new Size(250, 561);
             panelSideMenu.TabIndex = 0;
+            // 
+            // panelRedesSociales
+            // 
+            panelRedesSociales.BackColor = Color.Black;
+            panelRedesSociales.Controls.Add(RedesSociales);
+            panelRedesSociales.Dock = DockStyle.Top;
+            panelRedesSociales.ForeColor = Color.Black;
+            panelRedesSociales.Location = new Point(0, 393);
+            panelRedesSociales.Name = "panelRedesSociales";
+            panelRedesSociales.Size = new Size(250, 42);
+            panelRedesSociales.TabIndex = 6;
+            // 
+            // RedesSociales
+            // 
+            RedesSociales.BackColor = Color.Black;
+            RedesSociales.Dock = DockStyle.Top;
+            RedesSociales.FlatAppearance.BorderSize = 0;
+            RedesSociales.FlatAppearance.MouseDownBackColor = Color.Blue;
+            RedesSociales.FlatAppearance.MouseOverBackColor = Color.Red;
+            RedesSociales.FlatStyle = FlatStyle.Flat;
+            RedesSociales.ForeColor = Color.White;
+            RedesSociales.Location = new Point(0, 0);
+            RedesSociales.Name = "RedesSociales";
+            RedesSociales.Padding = new Padding(35, 0, 0, 0);
+            RedesSociales.Size = new Size(250, 40);
+            RedesSociales.TabIndex = 0;
+            RedesSociales.Text = "Redes Sociales";
+            RedesSociales.TextAlign = ContentAlignment.MiddleLeft;
+            RedesSociales.UseVisualStyleBackColor = false;
             // 
             // Sobre
             // 
@@ -237,35 +267,6 @@
             panelContenedor.Size = new Size(684, 561);
             panelContenedor.TabIndex = 1;
             // 
-            // panelRedesSociales
-            // 
-            panelRedesSociales.BackColor = Color.Black;
-            panelRedesSociales.Controls.Add(RedesSociales);
-            panelRedesSociales.Dock = DockStyle.Top;
-            panelRedesSociales.ForeColor = Color.Black;
-            panelRedesSociales.Location = new Point(0, 393);
-            panelRedesSociales.Name = "panelRedesSociales";
-            panelRedesSociales.Size = new Size(250, 42);
-            panelRedesSociales.TabIndex = 6;
-            // 
-            // RedesSociales
-            // 
-            RedesSociales.BackColor = Color.Black;
-            RedesSociales.Dock = DockStyle.Top;
-            RedesSociales.FlatAppearance.BorderSize = 0;
-            RedesSociales.FlatAppearance.MouseDownBackColor = Color.Blue;
-            RedesSociales.FlatAppearance.MouseOverBackColor = Color.Red;
-            RedesSociales.FlatStyle = FlatStyle.Flat;
-            RedesSociales.ForeColor = Color.White;
-            RedesSociales.Location = new Point(0, 0);
-            RedesSociales.Name = "RedesSociales";
-            RedesSociales.Padding = new Padding(35, 0, 0, 0);
-            RedesSociales.Size = new Size(250, 40);
-            RedesSociales.TabIndex = 0;
-            RedesSociales.Text = "Redes Sociales";
-            RedesSociales.TextAlign = ContentAlignment.MiddleLeft;
-            RedesSociales.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -274,13 +275,14 @@
             ClientSize = new Size(934, 561);
             Controls.Add(panelContenedor);
             Controls.Add(panelSideMenu);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(950, 600);
             Name = "Form1";
-            Text = "Form1";
+            Text = "MENU ";
             panelSideMenu.ResumeLayout(false);
+            panelRedesSociales.ResumeLayout(false);
             panelMenu2.ResumeLayout(false);
             panelSubMenu.ResumeLayout(false);
-            panelRedesSociales.ResumeLayout(false);
             ResumeLayout(false);
         }
 
