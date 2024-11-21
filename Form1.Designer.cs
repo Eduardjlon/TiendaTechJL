@@ -94,6 +94,7 @@
             RedesSociales.Text = "Redes Sociales";
             RedesSociales.TextAlign = ContentAlignment.MiddleLeft;
             RedesSociales.UseVisualStyleBackColor = false;
+            RedesSociales.Click += RedesSociales_Click;
             // 
             // Sobre
             // 

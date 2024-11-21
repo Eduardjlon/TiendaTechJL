@@ -101,7 +101,14 @@ namespace TiendaExaFinalS2
             // Agregar el formulario al panel y mostrarlo
             panelContenedor.Controls.Add(formulario);
             formulario.Show();
-       
+
+        }
+
+        private void RedesSociales_Click(object sender, EventArgs e)
+        {
+            var RedesSocialesIgForm = new RedesSociales();
+            AbrirFormularioEnPanel(RedesSocialesIgForm); //Mostrarlo en el panel
+            showSubMenus(panelRedesSociales);
         }
     }
 }
