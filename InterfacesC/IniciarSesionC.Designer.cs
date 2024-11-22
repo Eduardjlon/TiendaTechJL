@@ -148,6 +148,7 @@
             button1.TabIndex = 8;
             button1.Text = "Iniciar Sesion Cliente";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panelImagenLogo
             // 

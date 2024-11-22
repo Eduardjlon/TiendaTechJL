@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TiendaExaFinalS2.InterfacesE;
 
 namespace TiendaExaFinalS2.InterfacesC
 {
@@ -48,19 +49,36 @@ namespace TiendaExaFinalS2.InterfacesC
             this.Close();
 
             // Crear una nueva instancia de ContraOlvidada
-            var recuperarContraseñaForm = new InterfacesC.ContraOlvidadaC();
+            var OlvideContraForm = new InterfacesC.ContraOlvidadaC();
 
             // Llamar al método de Form1 para abrir el formulario en el panel
             var form1 = Application.OpenForms["Form1"] as Form1;
             if (form1 != null)
             {
-                // Pasar el formulario 'recuperarContraseñaForm' que es un tipo de 'Form'
-                form1.AbrirFormularioEnPanel(recuperarContraseñaForm); // Mostrar en el panel
+                // Pasar el formulario 'OlvideContraForm' que es un tipo de 'Form'
+                form1.AbrirFormularioEnPanel(OlvideContraForm); // Mostrar en el panel
             }
         }
         private void labelUsuario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Cerrar el formulario de IniciarSesion
+            this.Close();
+
+            // Crear una nueva instancia de ContraOlvidada
+            var MenuClientesForm = new InterfacesC.MenuCliente();
+
+            // Llamar al método de Form1 para abrir el formulario en el panel
+            var form1 = Application.OpenForms["Form1"] as Form1;
+            if (form1 != null)
+            {
+                // Pasar el formulario 'MenuClienteForm' que es un tipo de 'Form'
+                form1.AbrirFormularioEnPanel(MenuClientesForm); // Mostrar en el panel
+            }
         }
     }
 }
