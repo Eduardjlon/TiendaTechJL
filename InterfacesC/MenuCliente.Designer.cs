@@ -140,6 +140,7 @@
             btnQuitar.TabIndex = 44;
             btnQuitar.Text = "Quitar Del Carrito";
             btnQuitar.UseVisualStyleBackColor = false;
+            btnQuitar.Click += btnQuitar_Click;
             // 
             // MenuCliente
             // 

@@ -168,7 +168,6 @@ namespace TiendaExaFinalS2.InterfacesC
         // Función para eliminar un producto del carrito al seleccionarlo
         private void ListBoxCarrito_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListBox listBoxCarrito = (ListBox)sender;
             if (listBoxCarrito.SelectedItem != null)
             {
                 string productoSeleccionado = listBoxCarrito.SelectedItem.ToString();
@@ -184,9 +183,44 @@ namespace TiendaExaFinalS2.InterfacesC
             }
         }
 
+
         private void MenuCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            // Verificar si hay un ítem seleccionado en el ListBox
+            if (listBoxCarrito.SelectedItem != null)
+            {
+                // Obtener el nombre del producto y su precio desde el ítem seleccionado
+                string productoSeleccionado = listBoxCarrito.SelectedItem.ToString();
+                decimal precio = ObtenerPrecioDelProducto(productoSeleccionado);
+
+                // Eliminar el producto seleccionado del carrito
+                listBoxCarrito.Items.Remove(listBoxCarrito.SelectedItem);
+
+                // Actualizar el monto total
+                montoTotal -= precio;
+
+                // Actualizar la etiqueta de monto total
+                Label lblMontoTotal = (Label)this.Controls.Find("lblMontoTotal", true)[0];
+                lblMontoTotal.Text = $"Total: Q{montoTotal:F2}";
+            }
+        }
+
+        // Función para obtener el precio de un producto desde el formato del ListBox
+        private decimal ObtenerPrecioDelProducto(string producto)
+        {
+            string[] partes = producto.Split('-');
+            if (partes.Length == 2)
+            {
+                string precioStr = partes[1].Replace("Q", "").Trim();
+                decimal precio = decimal.Parse(precioStr);
+                return precio;
+            }
+            return 0;
         }
     }
 }
