@@ -74,17 +74,18 @@ namespace TiendaExaFinalS2.InterfacesC
         private void CargarProductos()
         {
             // Lista de productos con código, nombre, precio e imagen
-            var productos = new List<(string Codigo, string Nombre, decimal Precio, string RutaImagen)>
-            {
-                ("0001", "Eva", 49.99m, ObtenerRutaRelativa("Eva.jpg")),
-                ("0002", "Batman Completo", 139.99m, ObtenerRutaRelativa("BatmanCompleto.jpg")),
-                ("0003", "Batman Estatua", 99.99m, ObtenerRutaRelativa("BatmanEstatua.jpg")),
-                ("0004", "Messi FCB", 69.99m, ObtenerRutaRelativa("MessiFCB.jpg")),
-                ("0005", "Reloj y Cargador Magnetico", 199.99m, ObtenerRutaRelativa("RelojYCargadorMagnetico.jpg")),
-                ("0006", "Spiderman", 129.99m, ObtenerRutaRelativa("Spiderman.jpg")),
-                ("0007", "Spiderman Vs Venom", 99.99m, ObtenerRutaRelativa("SpidermanVSVenom.jpg")),
-                ("0008", "Wall-E", 79.99m, ObtenerRutaRelativa("Wall-E.jpg"))
-            };
+            var productos = new List<(string Codigo, string Nombre, decimal Precio, string RutaImagen, int Cantidad)>
+{
+    ("0001", "Eva", 49.99m, ObtenerRutaRelativa("Eva.jpg"), 50),
+    ("0002", "Batman Completo", 139.99m, ObtenerRutaRelativa("BatmanCompleto.jpg"), 30),
+    ("0003", "Batman Estatua", 99.99m, ObtenerRutaRelativa("BatmanEstatua.jpg"), 20),
+    ("0004", "Messi FCB", 69.99m, ObtenerRutaRelativa("MessiFCB.jpg"), 15),
+    ("0005", "Reloj y Cargador Magnetico", 199.99m, ObtenerRutaRelativa("RelojYCargadorMagnetico.jpg"), 10),
+    ("0006", "Spiderman", 129.99m, ObtenerRutaRelativa("Spiderman.jpg"), 25),
+    ("0007", "Spiderman Vs Venom", 99.99m, ObtenerRutaRelativa("SpidermanVSVenom.jpg"), 10),
+    ("0008", "Wall-E", 79.99m, ObtenerRutaRelativa("Wall-E.jpg"), 5)
+};
+
 
             foreach (var producto in productos)
             {
@@ -129,27 +130,45 @@ namespace TiendaExaFinalS2.InterfacesC
                     Location = new Point((panel.Width - pictureBox.Width) / 2, lblNombre.Bottom) // Justo debajo del nombre
                 };
 
-                // Agregar botón para agregar al carrito
-                Button btnAgregar = new Button
+                // Agregar Label de cantidad disponible
+                Label lblCantidad = new Label
                 {
-                    Text = "Agregar al Carrito",
-                    Width = 195,
+                    Text = $"Cantidad: {producto.Cantidad}",
+                    AutoSize = false,
+                    Width = pictureBox.Width,
                     Height = 25,
-                    Location = new Point(0, lblPrecio.Bottom),
-                    ForeColor = Color.White
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    ForeColor = Color.White,
+                    Location = new Point((panel.Width - pictureBox.Width) / 2, lblPrecio.Bottom) // Justo debajo del precio
                 };
-                btnAgregar.Click += (sender, e) => AgregarAlCarrito(producto.Nombre, producto.Precio); // Agregar producto al carrito
-                panel.Controls.Add(btnAgregar);
 
-                // Agregar controles al panel
-                panel.Controls.Add(pictureBox);
-                panel.Controls.Add(lblNombre);
-                panel.Controls.Add(lblPrecio);
+                 // Agregar botón para agregar al carrito
+        Button btnAgregar = new Button
+        {
+            Text = "Agregar al Carrito",
+            Width = 195,
+            Height = 25,
+            Location = new Point(0, lblCantidad.Bottom), // Justo debajo de la cantidad
+            ForeColor = Color.White
+        };
 
-                // Agregar el panel al FlowLayoutPanel
-                flowLayoutPanel1.Controls.Add(panel);
-            }
-        }
+        // Evento para el clic en el botón de agregar al carrito
+        btnAgregar.Click += (sender, e) =>
+        {
+            // Aquí podrías añadir lógica para agregar el producto al carrito
+            AgregarAlCarrito(producto.Nombre, producto.Precio);
+        };
+
+        panel.Controls.Add(pictureBox);
+        panel.Controls.Add(lblNombre);
+        panel.Controls.Add(lblPrecio);
+        panel.Controls.Add(lblCantidad); // Agregar el Label de cantidad
+        panel.Controls.Add(btnAgregar); // Agregar el botón de agregar
+
+        // Agregar el panel al FlowLayoutPanel
+        flowLayoutPanel1.Controls.Add(panel);
+    }
+}
 
         // Función para agregar producto al carrito
         private void AgregarAlCarrito(string nombre, decimal precio)
