@@ -94,6 +94,7 @@ namespace TiendaExaFinalS2.InterfacesC
                     Width = 195,
                     Height = 225 // Ajustado para que se ajuste a la imagen
                 };
+                panel.Tag = producto.Codigo;
 
                 // Agregar imagen
                 PictureBox pictureBox = new PictureBox
@@ -221,6 +222,57 @@ namespace TiendaExaFinalS2.InterfacesC
                 return precio;
             }
             return 0;
+        }
+
+        // Evento para el clic del botón de búsqueda
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string buscarTexto = txtBuscar.Text.ToLower();  // Obtener el texto en minúsculas para hacer la búsqueda sin importar mayúsculas/minúsculas
+
+            // Iterar sobre los controles en flowLayoutPanel1 y mostrar u ocultar los productos según la búsqueda
+            foreach (Panel panelProducto in flowLayoutPanel1.Controls)
+            {
+                // Obtener el nombre y el código del producto (supongo que el nombre es un Label y el código es almacenado como un Tag o en otro control)
+                Label lblNombreProducto = panelProducto.Controls.OfType<Label>().FirstOrDefault();
+                string codigoProducto = panelProducto.Tag?.ToString() ?? "";  // Asumo que el código se almacena en el Tag del Panel
+
+                if (lblNombreProducto != null)
+                {
+                    // Comprobar si el nombre o el código del producto contiene el texto de búsqueda
+                    if (lblNombreProducto.Text.ToLower().Contains(buscarTexto) || codigoProducto.Contains(buscarTexto))
+                    {
+                        panelProducto.Visible = true;  // Mostrar el producto si hay una coincidencia
+                    }
+                    else
+                    {
+                        panelProducto.Visible = false; // Ocultar el producto si no coincide
+                    }
+                }
+            }
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Ingresa Id/Nombre")
+            {
+                txtBuscar.Text = string.Empty; // Borra el texto predeterminado
+                txtBuscar.ForeColor = Color.White; // Cambia el color del texto si es necesario
+            }
+        }
+
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Evita el beep
+                btnBuscar.PerformClick(); // Simula clic en el botón buscar
+            }
+        }
+
+        // Deja esto vacío si no lo necesitas.
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

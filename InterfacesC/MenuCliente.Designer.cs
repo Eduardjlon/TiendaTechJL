@@ -62,6 +62,9 @@
             txtBuscar.TabIndex = 1;
             txtBuscar.Text = "Ingresa Id/Nombre";
             txtBuscar.TextAlign = HorizontalAlignment.Center;
+            // Asignación de eventos
+            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // btnBuscar
             // 
@@ -76,6 +79,7 @@
             btnBuscar.TabIndex = 2;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // panelImagenLogoMenu
             // 
@@ -103,11 +107,11 @@
             // 
             lblMontoTotal.AutoSize = true;
             lblMontoTotal.ForeColor = Color.White;
-            lblMontoTotal.Location = new Point(311, 132);
+            lblMontoTotal.Location = new Point(297, 132);
             lblMontoTotal.Name = "lblMontoTotal";
-            lblMontoTotal.Size = new Size(38, 15);
+            lblMontoTotal.Size = new Size(68, 15);
             lblMontoTotal.TabIndex = 42;
-            lblMontoTotal.Text = "label1";
+            lblMontoTotal.Text = "Total: Q0.00";
             // 
             // panelCarrito
             // 
