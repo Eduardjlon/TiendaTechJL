@@ -19,7 +19,6 @@ namespace TiendaExaFinalS2.InterfacesC
 
         private void ContraOlvidadaC_Load(object sender, EventArgs e)
         {
-            //ola prueba
         }
     }
 }

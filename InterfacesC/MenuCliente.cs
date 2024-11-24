@@ -16,6 +16,7 @@ namespace TiendaExaFinalS2.InterfacesC
             CargarProductos();
             CrearPanelCarrito();
         }
+        private List<string> facturas = new List<string>();
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -142,33 +143,33 @@ namespace TiendaExaFinalS2.InterfacesC
                     Location = new Point((panel.Width - pictureBox.Width) / 2, lblPrecio.Bottom) // Justo debajo del precio
                 };
 
-                 // Agregar botón para agregar al carrito
-        Button btnAgregar = new Button
-        {
-            Text = "Agregar al Carrito",
-            Width = 195,
-            Height = 25,
-            Location = new Point(0, lblCantidad.Bottom), // Justo debajo de la cantidad
-            ForeColor = Color.White
-        };
+                // Agregar botón para agregar al carrito
+                Button btnAgregar = new Button
+                {
+                    Text = "Agregar al Carrito",
+                    Width = 195,
+                    Height = 25,
+                    Location = new Point(0, lblCantidad.Bottom), // Justo debajo de la cantidad
+                    ForeColor = Color.White
+                };
 
-        // Evento para el clic en el botón de agregar al carrito
-        btnAgregar.Click += (sender, e) =>
-        {
-            // Aquí podrías añadir lógica para agregar el producto al carrito
-            AgregarAlCarrito(producto.Nombre, producto.Precio);
-        };
+                // Evento para el clic en el botón de agregar al carrito
+                btnAgregar.Click += (sender, e) =>
+                {
+                    // Aquí podrías añadir lógica para agregar el producto al carrito
+                    AgregarAlCarrito(producto.Nombre, producto.Precio);
+                };
 
-        panel.Controls.Add(pictureBox);
-        panel.Controls.Add(lblNombre);
-        panel.Controls.Add(lblPrecio);
-        panel.Controls.Add(lblCantidad); // Agregar el Label de cantidad
-        panel.Controls.Add(btnAgregar); // Agregar el botón de agregar
+                panel.Controls.Add(pictureBox);
+                panel.Controls.Add(lblNombre);
+                panel.Controls.Add(lblPrecio);
+                panel.Controls.Add(lblCantidad); // Agregar el Label de cantidad
+                panel.Controls.Add(btnAgregar); // Agregar el botón de agregar
 
-        // Agregar el panel al FlowLayoutPanel
-        flowLayoutPanel1.Controls.Add(panel);
-    }
-}
+                // Agregar el panel al FlowLayoutPanel
+                flowLayoutPanel1.Controls.Add(panel);
+            }
+        }
 
         // Función para agregar producto al carrito
         private void AgregarAlCarrito(string nombre, decimal precio)
@@ -292,6 +293,47 @@ namespace TiendaExaFinalS2.InterfacesC
         // Deja esto vacío si no lo necesitas.
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void FinalizarCompra_Click(object sender, EventArgs e)
+        {
+            // Buscar el ListBox de carrito
+            ListBox listBoxCarrito = (ListBox)this.Controls.Find("listBoxCarrito", true)[0];
+            List<string> productosSeleccionados = new List<string>();
+            foreach (var item in listBoxCarrito.Items)
+            {
+                productosSeleccionados.Add(item.ToString());
+            }
+
+            // Crear formulario de Facturas
+            Facturas facturasForm = new Facturas(productosSeleccionados, montoTotal, facturas);
+
+            // Llamar a Form1 para abrir el formulario en el panel
+            var form1 = Application.OpenForms["Form1"] as Form1;
+            if (form1 != null)
+            {
+                form1.AbrirFormularioEnPanel(facturasForm); // Método de Form1
+            }
+        }
+
+        private void QuitarFiltro_Click(object sender, EventArgs e)
+        {
+            // Limpiar el texto del cuadro de búsqueda
+            txtBuscar.Text = string.Empty;
+
+            // Llamar al método de búsqueda (para que se muestren todos los productos)
+            btnBuscar.PerformClick();
+        }
+    
+
+        public void LimpiarDatosFactura()
+        {
+            // Asegúrate de que la ListBox tenga el nombre correcto
+            ListBox listBoxProductos = (ListBox)this.Controls["ListBoxProductos"];
+            if (listBoxProductos != null)
+            {
+                listBoxProductos.Items.Clear(); // Limpiar los productos seleccionados
+            }
         }
     }
 }

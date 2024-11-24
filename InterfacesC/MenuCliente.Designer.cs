@@ -37,6 +37,8 @@
             panelCarrito = new Panel();
             listBoxCarrito = new ListBox();
             btnQuitar = new Button();
+            FinalizarCompra = new Button();
+            QuitarFiltro = new Button();
             panelCarrito.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,9 +64,8 @@
             txtBuscar.TabIndex = 1;
             txtBuscar.Text = "Ingresa Id/Nombre";
             txtBuscar.TextAlign = HorizontalAlignment.Center;
-            // Asignación de eventos
-            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
-            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
+            txtBuscar.Enter += txtBuscar_Enter;
+            txtBuscar.KeyDown += txtBuscar_KeyDown;
             // 
             // btnBuscar
             // 
@@ -146,12 +147,41 @@
             btnQuitar.UseVisualStyleBackColor = false;
             btnQuitar.Click += btnQuitar_Click;
             // 
+            // FinalizarCompra
+            // 
+            FinalizarCompra.BackColor = Color.Lime;
+            FinalizarCompra.FlatAppearance.BorderSize = 0;
+            FinalizarCompra.FlatStyle = FlatStyle.Flat;
+            FinalizarCompra.ForeColor = Color.Black;
+            FinalizarCompra.Location = new Point(271, 106);
+            FinalizarCompra.Name = "FinalizarCompra";
+            FinalizarCompra.Size = new Size(125, 23);
+            FinalizarCompra.TabIndex = 45;
+            FinalizarCompra.Text = "Finalizar Compra";
+            FinalizarCompra.UseVisualStyleBackColor = false;
+            FinalizarCompra.Click += FinalizarCompra_Click;
+            // 
+            // QuitarFiltro
+            // 
+            QuitarFiltro.BackColor = Color.Black;
+            QuitarFiltro.FlatStyle = FlatStyle.Flat;
+            QuitarFiltro.ForeColor = Color.White;
+            QuitarFiltro.Location = new Point(555, 95);
+            QuitarFiltro.Name = "QuitarFiltro";
+            QuitarFiltro.Size = new Size(101, 23);
+            QuitarFiltro.TabIndex = 46;
+            QuitarFiltro.Text = "Quitar Filtro";
+            QuitarFiltro.UseVisualStyleBackColor = false;
+            QuitarFiltro.Click += QuitarFiltro_Click;
+            // 
             // MenuCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(668, 522);
+            Controls.Add(QuitarFiltro);
+            Controls.Add(FinalizarCompra);
             Controls.Add(btnQuitar);
             Controls.Add(panelCarrito);
             Controls.Add(lblMontoTotal);
@@ -180,5 +210,7 @@
         private Panel panelCarrito;
         private ListBox listBoxCarrito;
         private Button btnQuitar;
+        private Button FinalizarCompra;
+        private Button QuitarFiltro;
     }
 }

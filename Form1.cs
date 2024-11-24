@@ -15,7 +15,7 @@ namespace TiendaExaFinalS2
             CargarFormularioInicial();
 
         }
-        private void CargarFormularioInicial()
+        public void CargarFormularioInicial()
         {
             AbrirFormularioEnPanel(new SobreNosotros());
         }
