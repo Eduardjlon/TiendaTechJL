@@ -1,31 +1,15 @@
-﻿namespace TiendaExaFinalS2.InterfacesE
+﻿using MySql.Data.MySqlClient;
+using BCrypt.Net;
+using System;
+using System.Windows.Forms;
+
+namespace TiendaExaFinalS2.InterfacesE
 {
-    partial class IniciarSesionE
+    public partial class IniciarSesionE : Form
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+         
+        #region Código generado por el Diseñador
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             LabelInicioSesion = new Label();
@@ -51,7 +35,6 @@
             LabelInicioSesion.TabIndex = 0;
             LabelInicioSesion.Text = "Inicia Sesión";
             LabelInicioSesion.TextAlign = ContentAlignment.MiddleCenter;
-            LabelInicioSesion.Click += label1_Click;
             // 
             // UsuarioIngreso
             // 
@@ -62,7 +45,6 @@
             UsuarioIngreso.Size = new Size(206, 23);
             UsuarioIngreso.TabIndex = 1;
             UsuarioIngreso.TextAlign = HorizontalAlignment.Center;
-            UsuarioIngreso.TextChanged += textBox1_TextChanged_1;
             // 
             // labelIniciaSesionParaContinuar
             // 
@@ -77,7 +59,6 @@
             labelIniciaSesionParaContinuar.TabIndex = 2;
             labelIniciaSesionParaContinuar.Text = "Inicia Sesión Para Continuar";
             labelIniciaSesionParaContinuar.TextAlign = ContentAlignment.MiddleCenter;
-            labelIniciaSesionParaContinuar.Click += label1_Click_1;
             // 
             // labelUsuario
             // 
@@ -92,7 +73,6 @@
             labelUsuario.TabIndex = 3;
             labelUsuario.Text = "Usuario";
             labelUsuario.TextAlign = ContentAlignment.MiddleCenter;
-            labelUsuario.Click += labelUsuario_Click;
             // 
             // ContraseñaIngreso
             // 
@@ -132,7 +112,6 @@
             OlvideContraseña.TabIndex = 7;
             OlvideContraseña.Text = "Olvide Mi Contraseña :(";
             OlvideContraseña.UseVisualStyleBackColor = false;
-            OlvideContraseña.Click += OlvideContraseña_Click;
             // 
             // button1
             // 
@@ -148,6 +127,7 @@
             button1.TabIndex = 8;
             button1.Text = "Iniciar Sesion Empleado";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += new EventHandler(button1_Click);
             // 
             // panelImagenLogo
             // 
@@ -155,31 +135,92 @@
             panelImagenLogo.BackgroundImageLayout = ImageLayout.Stretch;
             panelImagenLogo.Location = new Point(242, 12);
             panelImagenLogo.Name = "panelImagenLogo";
-            panelImagenLogo.Size = new Size(206, 100);
-            panelImagenLogo.TabIndex = 36;
+            panelImagenLogo.Size = new Size(206, 121);
+            panelImagenLogo.TabIndex = 9;
             // 
             // IniciarSesionE
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(668, 522);
+            ClientSize = new Size(682, 547);
             Controls.Add(panelImagenLogo);
             Controls.Add(button1);
             Controls.Add(OlvideContraseña);
-            Controls.Add(ContraseñaIngreso);
             Controls.Add(textBoxContraI);
+            Controls.Add(ContraseñaIngreso);
             Controls.Add(labelUsuario);
             Controls.Add(labelIniciaSesionParaContinuar);
             Controls.Add(UsuarioIngreso);
             Controls.Add(LabelInicioSesion);
-            MinimumSize = new Size(684, 561);
+            FormBorderStyle = FormBorderStyle.None;
+            StartPosition = FormStartPosition.CenterScreen;
             Name = "IniciarSesionE";
-            Text = "IniciarSesionC";
+            Text = "IniciarSesionE";
             ResumeLayout(false);
             PerformLayout();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usuario = UsuarioIngreso.Text;
+            string contrasena = textBoxContraI.Text;
 
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
+            {
+                MessageBox.Show("Por favor, ingresa usuario y contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (ValidarUsuario(usuario, contrasena))
+            {
+
+                MessageBox.Show("Inicio de sesión exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool ValidarUsuario(string usuario, string contrasena)
+        {
+            try
+            {
+                DatabaseConnection dbConnection = new DatabaseConnection();
+                string query = "SELECT PasswordHash FROM Employees WHERE Username = @Username";
+
+                using (MySqlConnection conn = dbConnection.GetConnection())
+                {
+                    conn.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", usuario);
+
+                        var result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string contrasenaCifrada = result.ToString();
+
+                            if (BCrypt.Net.BCrypt.Verify(contrasena, contrasenaCifrada))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al validar el usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
         #endregion
 
         private Label LabelInicioSesion;

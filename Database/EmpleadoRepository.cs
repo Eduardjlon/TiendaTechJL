@@ -5,17 +5,17 @@ namespace TiendaExaFinalS2
 {
     public class EmpleadoRepository
     {
-        private readonly string connectionString = "Server=localhost;Database=pos_system;User ID=root;Password=admin123;";
+        private readonly string connectionString = "Server=localhost;Database=PointOfSale;User ID=root;Password=admin123;";
 
         // Método para consultar todos los empleados
-        public void MostrarEmpleados()
+        public void MostrarEmployees()
         {
             try
             {
                 using (MySqlConnection conexion = new MySqlConnection(connectionString))
                 {
                     conexion.Open();
-                    string query = "SELECT * FROM Empleados";
+                    string query = "SELECT * FROM PointOfSale.Employees"; // Cambiar "Empleados" a "Employees"
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conexion))
                     {
@@ -25,7 +25,7 @@ namespace TiendaExaFinalS2
                         while (reader.Read())
                         {
                             Console.WriteLine("ID: {0}, Nombre: {1}, Apellido: {2}, Usuario: {3}",
-                                reader["Id"], reader["Nombre"], reader["Apellido"], reader["Usuario"]);
+                                reader["EmployeeID"], reader["FirstName"], reader["LastName"], reader["Username"]);
                         }
                     }
                 }

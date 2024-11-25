@@ -10,11 +10,9 @@ namespace TiendaExaFinalS2
         [STAThread]
         static void Main()
         {
-            EmpleadoRepository empleadoRepo = new EmpleadoRepository();
-            empleadoRepo.MostrarEmpleados();  // Llamada para mostrar los empleados
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
+            // Inicializar la interfaz gráfica
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
     }

@@ -247,7 +247,6 @@ namespace TiendaExaFinalS2.InterfacesE
             string usuario = txtUsuario.Text;
             string contrasena = txtContrasena.Text;
 
-            // Validar campos vacíos
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(dpi) ||
                 string.IsNullOrEmpty(cargo) || string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
             {
@@ -257,43 +256,34 @@ namespace TiendaExaFinalS2.InterfacesE
 
             try
             {
-                // Cifrar la contraseña
                 string contrasenaCifrada = BCrypt.Net.BCrypt.HashPassword(contrasena);
 
-                // Crear instancia de la conexión a la base de datos
                 DatabaseConnection dbConnection = new DatabaseConnection();
 
-                // Abrir la conexión
                 using (MySqlConnection conn = dbConnection.GetConnection())
                 {
                     conn.Open();
 
-                    // Consulta SQL para insertar un nuevo empleado
-                    string query = @"INSERT INTO Empleados (Nombre, Apellido, DPI, Cargo, Usuario, Contrasena)
-                             VALUES (@Nombre, @Apellido, @DPI, @Cargo, @Usuario, @Contrasena)";
+                    string query = @"INSERT INTO Employees (FirstName, LastName, IdentificationNumber, Position, Username, PasswordHash)
+                             VALUES (@FirstName, @LastName, @IdentificationNumber, @Position, @Username, @PasswordHash)";
 
-                    // Preparar el comando SQL
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        // Agregar los parámetros a la consulta SQL
-                        cmd.Parameters.AddWithValue("@Nombre", nombre);
-                        cmd.Parameters.AddWithValue("@Apellido", apellido);
-                        cmd.Parameters.AddWithValue("@DPI", dpi);
-                        cmd.Parameters.AddWithValue("@Cargo", cargo);
-                        cmd.Parameters.AddWithValue("@Usuario", usuario);
-                        cmd.Parameters.AddWithValue("@Contrasena", contrasenaCifrada);
+                        cmd.Parameters.AddWithValue("@FirstName", nombre);
+                        cmd.Parameters.AddWithValue("@LastName", apellido);
+                        cmd.Parameters.AddWithValue("@IdentificationNumber", dpi);
+                        cmd.Parameters.AddWithValue("@Position", cargo);
+                        cmd.Parameters.AddWithValue("@Username", usuario);
+                        cmd.Parameters.AddWithValue("@PasswordHash", contrasenaCifrada);
 
-                        // Ejecutar la consulta
                         cmd.ExecuteNonQuery();
 
-                        // Mostrar mensaje de éxito
                         MessageBox.Show("Empleado agregado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Manejar cualquier error que ocurra durante la inserción
                 MessageBox.Show("Error al agregar el empleado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

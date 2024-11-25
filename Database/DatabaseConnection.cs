@@ -8,8 +8,8 @@ namespace TiendaExaFinalS2
 
         public DatabaseConnection()
         {
-            // Cadena de conexión a la base de datos MySQL
-            connectionString = "Server=localhost;Database=pos_system;User ID=root;Password=admin123;";
+     
+            connectionString = "Server=localhost;Database=PointOfSale;User ID=root;Password=admin123;";
         }
 
         public MySqlConnection GetConnection()
