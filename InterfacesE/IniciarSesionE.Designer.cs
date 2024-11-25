@@ -7,7 +7,7 @@ namespace TiendaExaFinalS2.InterfacesE
 {
     public partial class IniciarSesionE : Form
     {
-         
+
         #region Código generado por el Diseñador
 
         private void InitializeComponent()
@@ -112,6 +112,7 @@ namespace TiendaExaFinalS2.InterfacesE
             OlvideContraseña.TabIndex = 7;
             OlvideContraseña.Text = "Olvide Mi Contraseña :(";
             OlvideContraseña.UseVisualStyleBackColor = false;
+            OlvideContraseña.Click += OlvideContraseña_Click_1;
             // 
             // button1
             // 
@@ -127,7 +128,7 @@ namespace TiendaExaFinalS2.InterfacesE
             button1.TabIndex = 8;
             button1.Text = "Iniciar Sesion Empleado";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += new EventHandler(button1_Click);
+            button1.Click += button1_Click;
             // 
             // panelImagenLogo
             // 
@@ -154,12 +155,13 @@ namespace TiendaExaFinalS2.InterfacesE
             Controls.Add(UsuarioIngreso);
             Controls.Add(LabelInicioSesion);
             FormBorderStyle = FormBorderStyle.None;
-            StartPosition = FormStartPosition.CenterScreen;
             Name = "IniciarSesionE";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IniciarSesionE";
             ResumeLayout(false);
             PerformLayout();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario = UsuarioIngreso.Text;

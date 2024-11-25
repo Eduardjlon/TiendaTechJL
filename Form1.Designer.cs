@@ -141,7 +141,7 @@
             CrearUsuarioC.Padding = new Padding(35, 0, 0, 0);
             CrearUsuarioC.Size = new Size(250, 40);
             CrearUsuarioC.TabIndex = 1;
-            CrearUsuarioC.Text = "Crear Usuario";
+            CrearUsuarioC.Text = "Factura";
             CrearUsuarioC.TextAlign = ContentAlignment.MiddleLeft;
             CrearUsuarioC.UseVisualStyleBackColor = false;
             CrearUsuarioC.Click += CrearUsuarioC_Click;
@@ -159,7 +159,7 @@
             IniciarSesionC.Padding = new Padding(35, 0, 0, 0);
             IniciarSesionC.Size = new Size(250, 40);
             IniciarSesionC.TabIndex = 0;
-            IniciarSesionC.Text = "Iniciar Sesión";
+            IniciarSesionC.Text = "Tienda TECHJL";
             IniciarSesionC.TextAlign = ContentAlignment.MiddleLeft;
             IniciarSesionC.UseVisualStyleBackColor = true;
             IniciarSesionC.Click += IniciarSesionC_Click;

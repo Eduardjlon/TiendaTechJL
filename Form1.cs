@@ -70,16 +70,16 @@ namespace TiendaExaFinalS2
 
         private void IniciarSesionC_Click(object sender, EventArgs e)
         {
-            var iniciarSesionForm = new IniciarSesionC();
-            AbrirFormularioEnPanel(iniciarSesionForm);   // Mostrarlo en el panel
+            var TiendaMenuForm = new MenuCliente();
+            AbrirFormularioEnPanel(TiendaMenuForm);   // Mostrarlo en el panel
         }
 
 
 
         private void CrearUsuarioC_Click(object sender, EventArgs e)
         {
-            var CrearUsuarioForm = new CrearUsuarioC();
-            AbrirFormularioEnPanel(CrearUsuarioForm);   // Mostrarlo en el panel
+            var FacturaGenerarForm = new Facturas();
+            AbrirFormularioEnPanel(FacturaGenerarForm);   // Mostrarlo en el panel
         }
 
         private void Sobre_Click(object sender, EventArgs e)

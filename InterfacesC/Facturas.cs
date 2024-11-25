@@ -23,6 +23,10 @@ namespace TiendaExaFinalS2.InterfacesC
             MostrarFactura();
         }
 
+        public Facturas()
+        {
+        }
+
         private void ConfigurarInterfaz()
         {
             this.Text = "Facturación";

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TiendaExaFinalS2.InterfacesC;
 
 namespace TiendaExaFinalS2.InterfacesE
 {
@@ -62,5 +63,18 @@ namespace TiendaExaFinalS2.InterfacesE
         {
 
         }
+
+        private void OlvideContraseña_Click_1(object sender, EventArgs e)
+        {
+            var OlvideContraForm = new ContraOlvidadaE();
+            AbrirFormularioEnPanel(OlvideContraForm);   // Mostrarlo en el panel
+        }
+
+        private void AbrirFormularioEnPanel(ContraOlvidadaE olvideContraForm)
+        {
+            throw new NotImplementedException();
+        }
     }
-}
+        
+    }
+
