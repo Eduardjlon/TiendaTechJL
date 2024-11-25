@@ -3,18 +3,18 @@ using System;
 
 namespace TiendaExaFinalS2
 {
-    public class EmpleadoRepository
+    public class ClienteRepository
     {
         private readonly string connectionString = "Server=localhost;Database=PointOfSale;User ID=root;Password=admin123;";
 
-        public void MostrarEmployees()
+        public void MostrarClientes()
         {
             try
             {
                 using (MySqlConnection conexion = new MySqlConnection(connectionString))
                 {
                     conexion.Open();
-                    string query = "SELECT * FROM PointOfSale.Employees";
+                    string query = "SELECT * FROM PointOfSale.Customers"; 
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conexion))
                     {
@@ -22,8 +22,8 @@ namespace TiendaExaFinalS2
 
                         while (reader.Read())
                         {
-                            Console.WriteLine("ID: {0}, Nombre: {1}, Apellido: {2}, Usuario: {3}",
-                                reader["EmployeeID"], reader["FirstName"], reader["LastName"], reader["Username"]);
+                            Console.WriteLine("NIT: {0}, Nombres: {1}, Apellidos: {2}, Dirección: {3}, Teléfono: {4}",
+                                reader["NIT"], reader["FirstName"], reader["LastName"], reader["Address"], reader["Phone"]);
                         }
                     }
                 }
