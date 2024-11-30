@@ -22,7 +22,7 @@ namespace TiendaExaFinalS2.InterfacesC
         {
         }
 
-        // Función para obtener la ruta relativa
+        // Función para obtener la ruta 
         private string ObtenerRutaRelativa(string nombreArchivo)
         {
             // Obtiene el directorio base del ejecutable y construye la ruta completa
